@@ -1,0 +1,17 @@
+﻿@using ShopOnlineEmptyProject.ViewModels
+@model ProductsListViewModel
+@using System.Globalization
+
+
+<h1>All cars: </h1>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Product car in Model.allProducts)
+        {
+            @Html.Partial("AllProducts", car)
+        }
+    }
+</div>
+
+
